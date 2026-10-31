@@ -2,10 +2,163 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Course home page of Henga Liambee Desmond, a BYU-Pathway software development student from Nigeria.">
+    <meta name="author" content="Henga Liambee Desmond">
+
+    <title>Home | Henga Liambee Desmond</title>
+
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS files: small first, large second -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- External JavaScript files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Welcome to my first website.</p>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+
+            <div class="site-brand">
+                <img src="images/logo.svg" alt="Site logo">
+                <span>Henga Liambee Desmond</span>
+            </div>
+
+            <button id="menu-button"
+                class="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-nav">
+                ☰
+            </button>
+
+            <nav id="primary-nav">
+                <a href="index.html" class="active" aria-current="page">Home</a>
+                <a href="chamber/index.html">Chamber</a>
+                <a href="final/index.html">Final Project</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="home-grid">
+
+            <!-- ABOUT ME SECTION -->
+            <section class="about-section">
+                <h2>About Me</h2>
+
+                <div class="about-content">
+                    <p>
+                        My name is Henga Liambee Desmond. I am from Nigeria
+                        and I live in Plateau State. I hold a Bachelor of Science in Education (B.Sc. Ed.) in Computer Science, with a background in teaching, education, and computing.
+                    </p>
+
+                    <p>
+                        I enjoy teaching, learning new technologies, and
+                        solving problems through programming. I am currently
+                        studying software development through BYU-Pathway Worldwide
+                        My interest is in web development, especially HTML,
+                        CSS, JavaScript and Python.
+                    </p>
+                </div>
+            </section>
+
+            <!-- STUDENT PHOTO SECTION -->
+            <section class="photo-section">
+                <h2>Student Photo</h2>
+
+                <div class="photo-content">
+                    <img src="images/desmond.jpg"
+                        alt="Photograph of Henga Liambee Desmond"
+                        width="220"
+                        height="220">
+                </div>
+            </section>
+
+        </div>
+
+        <!-- COURSE SECTION -->
+        <section class="course-section">
+
+            <h2>Web Certificate Courses</h2>
+
+            <div class="course-filters">
+
+                <button type="button" data-filter="ALL" class="selected">
+                    All
+                </button>
+
+                <button type="button" data-filter="CSE">
+                    CSE
+                </button>
+
+                <button type="button" data-filter="WDD">
+                    WDD
+                </button>
+
+            </div>
+
+            <p id="credit-total" aria-live="polite">
+                Total credits: 0
+            </p>
+
+            <div id="course-list" class="course-list" aria-live="polite">
+                <!-- JavaScript will display courses here -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="social-links">
+
+            <a href="https://github.com/YOUR-GITHUB-USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/henga-liambee-desmond/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                LinkedIn
+            </a>
+
+        </div>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            Henga Liambee Desmond | Nigeria
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
 </body>
 </html>
