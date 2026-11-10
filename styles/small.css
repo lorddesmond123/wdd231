@@ -16,9 +16,12 @@ header {
     background-color: #14213d;
     color: white;
 }
-
 .header-content {
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .site-brand {
@@ -39,7 +42,7 @@ header {
 /* MOBILE NAVIGATION */
 .menu-button {
     display: block;
-    margin: 12px 0 0 auto;
+    margin: 0;
     padding: 8px 14px;
     color: white;
     background: #1d4e89;
@@ -52,6 +55,7 @@ header {
 nav {
     display: none;
     flex-direction: column;
+    flex-basis: 100%;
     margin-top: 10px;
 }
 
@@ -245,3 +249,5 @@ footer p {
 #lastModified {
     font-size: 0.85rem;
 }
+
+

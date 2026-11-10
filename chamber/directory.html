@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Information -->
+    <meta name="description" content="Explore local businesses, services, and organizations in Jos, Plateau State, Nigeria, through the Jos City Chamber of Commerce directory.">
+    <meta name="author" content="Henga Liambee Desmond">
+
+    <!-- Facebook Open Graph Meta Information -->
+    <meta property="og:title" content="Jos City Chamber of Commerce | Business Directory">
+    <meta property="og:description" content="Discover and connect with businesses in Jos, Plateau State, Nigeria. Support local businesses and grow our community.">
+    <meta property="og:image" content="https://lorddesmond123.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://lorddesmond123.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <title>Jos City Chamber of Commerce | Directory</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+
+            <div class="site-brand">
+                <img src="images/logo.png"
+                     alt="Jos City Chamber of Commerce logo"
+                     width="60"
+                     height="60">
+
+                <div>
+                    <span class="brand-name">Jos City</span>
+                    <span class="brand-subtitle">Chamber of Commerce</span>
+                </div>
+            </div>
+
+            <button id="menu-button"
+                    class="menu-button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-nav">
+                ☰
+            </button>
+
+            <nav id="primary-nav">
+                <a href="index.html">Home</a>
+                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h1>Business Directory</h1>
+
+        <p class="intro">
+            Welcome to the Jos City Chamber of Commerce Business Directory.
+            Discover local businesses, connect with service providers,
+            and support economic growth in Jos, Plateau State.
+        </p>
+
+        <!-- DIRECTORY VIEW CONTROLS -->
+        <div class="view-buttons">
+            <button type="button" id="grid-view" class="selected"
+                    aria-pressed="true">
+                Grid View
+            </button>
+
+            <button type="button" id="list-view"
+                    aria-pressed="false">
+                List View
+            </button>
+        </div>
+
+        <!-- BUSINESS MEMBERS WILL LOAD HERE -->
+        <section id="members-container"
+                 class="grid-view"
+                 aria-label="Chamber business members"
+                 aria-live="polite">
+
+            <p>Loading business members...</p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="contact-info">
+            <h2>Jos City Chamber of Commerce</h2>
+
+            <p>Jos, Plateau State, Nigeria</p>
+            <p>Email: joccima@gmail.com</p>
+            <p>Phone: +234 703 833 8460</p>
+        </div>
+
+        <div class="development-info">
+
+            <p>Henga Liambee Desmond</p>
+
+            <p>WDD 231 - Web Frontend Development</p>
+
+            <p>
+                &copy; <span id="currentyear"></span>
+                Jos City Chamber of Commerce
+            </p>
+
+            <p>
+                Last Modified:
+                <span id="lastModified"></span>
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

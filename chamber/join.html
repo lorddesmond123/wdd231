@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Join the Jos City Chamber of Commerce and connect with local businesses in Plateau State, Nigeria.">
+
+    <meta name="author" content="Henga Liambee Desmond">
+
+    <title>Jos City Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="images/favicon.png">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Jos City Chamber of Commerce</h2>
+
+        <nav id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" aria-current="page">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Join Our Chamber</h1>
+
+        <p>
+            Become a member of the Jos City Chamber of Commerce.
+            Connect with other businesses, promote your services,
+            and take advantage of opportunities in our community.
+        </p>
+
+        <h2>Membership Benefits</h2>
+
+        <ul>
+            <li>Connect with other local business owners.</li>
+            <li>Promote your business in our member directory.</li>
+            <li>Discover networking opportunities.</li>
+            <li>Participate in business development activities.</li>
+            <li>Support economic growth in Jos City.</li>
+        </ul>
+
+        <h2>Membership Levels</h2>
+
+        <div class="membership-levels">
+
+            <section>
+                <h3>Non-Profit Membership</h3>
+                <p>For eligible non-profit organizations.</p>
+                <p>Community support and networking opportunities.</p>
+            </section>
+
+            <section>
+                <h3>Bronze Membership</h3>
+                <p>For small and growing businesses.</p>
+                <p>Business promotion and networking opportunities.</p>
+            </section>
+
+            <section>
+                <h3>Silver Membership</h3>
+                <p>For established businesses.</p>
+                <p>Additional promotional and learning opportunities.</p>
+            </section>
+
+            <section>
+                <h3>Gold Membership</h3>
+                <p>For businesses seeking greater visibility.</p>
+                <p>Premium promotional and networking opportunities.</p>
+            </section>
+
+        </div>
+
+        <h2>Membership Application</h2>
+
+        <form action="#" method="get">
+
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name"
+                title="Enter your first name" autocomplete="given-name"
+                required>
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name"
+                title="Enter your last name" autocomplete="family-name"
+                required>
+
+            <label for="organization">Business or Organization</label>
+            <input type="text" id="organization" name="organization"
+                title="Enter your business name" autocomplete="organization"
+                required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                title="Enter your email address" autocomplete="email"
+                placeholder="example@email.com" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                title="Enter your phone number" autocomplete="tel"
+                required>
+
+            <label for="membership">Membership Level</label>
+            <select id="membership" name="membership" required>
+                <option value="">Select a membership level</option>
+                <option value="nonprofit">Non-Profit</option>
+                <option value="bronze">Bronze</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+            </select>
+
+            <label for="description">Business Description</label>
+            <textarea id="description" name="description"
+                title="Describe your business" rows="5"></textarea>
+
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>Jos City Chamber of Commerce</p>
+        <p>Jos, Plateau State, Nigeria</p>
+        <p>&copy; <span id="currentyear"></span> Jos City Chamber</p>
+    </footer>
+
+    <script>
+        document.querySelector("#currentyear").textContent =
+            new Date().getFullYear();
+
+        document.querySelector("#timestamp").value =
+            new Date().toISOString();
+    </script>
+
+</body>
+</html>

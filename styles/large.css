@@ -1,25 +1,29 @@
 
-/* TABLET AND DESKTOP RESPONSIVENESS */
 
+/* TABLET AND DESKTOP */
 @media screen and (min-width: 700px) {
 
-    /* HEADER */
     .header-content {
         max-width: 1100px;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: nowrap;
     }
 
+    /* Hide hamburger button on desktop */
     .menu-button {
         display: none;
     }
 
+    /* Show navigation links horizontally */
     nav {
         display: flex;
         flex-direction: row;
+        flex-basis: auto;
         margin-top: 0;
+        align-items: center;
     }
 
     nav a {

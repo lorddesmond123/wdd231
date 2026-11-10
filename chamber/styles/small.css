@@ -1,0 +1,379 @@
+
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #14213d;
+    color: white;
+}
+
+.header-content {
+    padding: 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =================================
+   WEBSITE BRAND
+================================= */
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.site-brand img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: white;
+    border-radius: 5px;
+}
+
+.brand-name {
+    display: block;
+    font-size: 1.2rem;
+}
+
+.brand-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: #fca311;
+}
+
+/* =================================
+   MOBILE NAVIGATION
+================================= */
+
+.menu-button {
+    display: block;
+    margin: 12px 0 0 auto;
+    padding: 8px 14px;
+    color: white;
+    background: #1d4e89;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-top: 1px solid #526078;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #1d4e89;
+}
+
+nav a.active {
+    background-color: #1d4e89;
+    border-left: 4px solid #fca311;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+h1 {
+    color: #14213d;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.intro {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* =================================
+   GRID AND LIST BUTTONS
+================================= */
+
+.view-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.view-buttons button {
+    padding: 10px 20px;
+    background-color: #14213d;
+    color: white;
+    border: 2px solid #14213d;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-buttons button:hover,
+.view-buttons button:focus {
+    background-color: #1d4e89;
+}
+
+.view-buttons button.selected {
+    background-color: #fca311;
+    color: #14213d;
+    border-color: #fca311;
+}
+
+/* =================================
+   MEMBER GRID VIEW
+================================= */
+
+#members-container.grid-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.member-card {
+    background-color: #f1f3f5;
+    border: 1px solid #cbd2dc;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.member-card h2 {
+    color: #14213d;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.member-card img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+.member-card p {
+    margin: 8px 0;
+}
+
+.member-card a {
+    color: #174a7e;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.membership {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e1e6ed;
+    color: #14213d;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* =================================
+   MEMBER LIST VIEW
+================================= */
+
+#members-container.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#members-container.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 12px;
+}
+
+#members-container.list-view .member-card img {
+    display: none;
+}
+
+#members-container.list-view .member-card h2 {
+    margin: 0 0 5px;
+    background: none;
+    color: #14213d;
+    text-align: left;
+}
+
+#members-container.list-view .member-card p {
+    margin: 3px 0;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 25px;
+}
+
+footer h2 {
+    color: #fca311;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 7px;
+    overflow-wrap: anywhere;
+}
+
+.development-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #526078;
+}
+
+#lastModified {
+    font-size: 0.9rem;
+}
+
+/* GRID VIEW */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 5px;
+}
+
+.member-card {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    text-align: center;
+}
+
+.member-card img {
+    width: auto;
+    max-width: 100%;
+    height: 75px;
+    object-fit: contain;
+    margin: 0.5rem auto;
+}
+
+.member-card h2 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    color: #14213d;
+}
+
+.membership {
+    font-weight: bold;
+    margin: 0.5rem;
+}
+
+/* DETAILS */
+.member-details {
+    margin-top: 0.5rem;
+}
+
+.member-details summary {
+    color: navy;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.details-content {
+    margin-top: 0.75rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.details-content p {
+    margin: 0.5rem 0;
+}
+
+/* LIST VIEW */
+.list-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.list-view .member-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+}
+
+.list-view .member-card img {
+    display: none;
+}
+
+.list-view .member-card h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.list-view .membership {
+    margin: 0;
+}
+
+.list-view .member-details {
+    margin: 0;
+}
+
+.list-view .member-card:nth-child(even) {
+    background-color: #bbb;
+}
+
+.list-view .member-details[open] {
+    grid-column: 1 / -1;
+}
+
+.list-view .details-content {
+    padding: 0.75rem;
+    background-color: #eee;
+}

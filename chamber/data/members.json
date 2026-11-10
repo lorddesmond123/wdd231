@@ -1,0 +1,75 @@
+
+[
+    {
+        "name": "Jos Electricity Distribution Company",
+        "address": "No. 1 Ahmadu Bello Way, Jos, Plateau State",
+        "phone": "+234 803 123 4567",
+        "website": "https://www.jedplc.com",
+        "image": "Jos Electricity.jpg",
+        "membership": 3,
+        "description": "Electricity distribution and power services."
+    },
+    {
+        "name": "The Hill Station Jos",
+        "address": "Old Airport Junction, Jos, Plateau State",
+        "phone": "+234 803 234 5678",
+        "website":"https://www.hillstationjos.com/",
+        "image":"Hill station Jos.jpg",
+        "membership": 3,
+        "description": "Hospitality, accommodation and restaurant services."
+    },
+    {
+        "name": "Standard Trust Bank",
+        "address": "Ahmadu Bello Way, Jos, Plateau State",
+        "phone": "+234 803 345 6789",
+        "website": "https://www.standardtrustbank.com",
+        "image": "Standard trust.jpg",
+        "membership": 2,
+        "description": "Banking and financial services."
+    },
+    {
+        "name": "Compunet Limited",
+    "address": "12 Rwang-Pam Street, Suite B1-B2, 2nd Floor, Jos, Plateau State",
+    "phone": "0806 811 1435",
+    "website": "https://www.compunetlimited.org",
+    "image": "compunet Limited.jpg",
+    "membership": 1,
+    "description": "Computer hardware, software solutions and ICT training."
+    },
+    {
+        "name": "Rockview Construction",
+        "address": "Rayfield Road, Jos, Plateau State",
+        "phone": "+234 803 567 8901",
+        "website": "https://www.rockviewconstruction.com",
+        "image": "Rockview.jpg",
+        "membership": 1,
+        "description": "Building construction and property development."
+    },
+    {
+        "name": "Ecofarms and Agro Services Ltd.",
+        "address": "No. 58 Katyen House, Yakubu Gowon Road, by Miango Junction, Jos, Plateau State",
+        "phone": "+234 817 623 2135",
+        "website": "https://ecofarmsandagroservices.com",
+        "image": "Ecofarms.jpg",
+        "membership": 1,
+        "description": "Agricultural products, farm inputs, greenhouse services, irrigation, soil analysis and sustainable farming solutions."
+    },
+    {
+    "name": "Kobbware Solutions",
+    "address": "Shop 6, Zarmagada Road, opposite Air Force Senior Officers' Quarters, Rayfield, Jos, Plateau State",
+    "phone": "0703 586 0857",
+    "website": "https://kobbware.com",
+    "image": "kobbware solutions.jpg",
+    "membership": 2,
+    "description": "Software solutions, technology training and digital services."
+},
+    {
+        "name": "Tin City Travel Services",
+        "address": "Secretariat Junction, Jos, Plateau State",
+        "phone": "+234 803 890 1234",
+        "website": "https://www.tincityfounders.com/",
+        "image": "Tin City.jpg",
+        "membership": 1,
+        "description": "Travel planning and transportation services."
+    }
+]

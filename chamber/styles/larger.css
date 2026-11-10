@@ -1,0 +1,117 @@
+
+/* =================================
+   TABLET AND DESKTOP RESPONSIVENESS
+================================= */
+
+@media screen and (min-width: 700px) {
+
+    /* HEADER */
+    .header-content {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    nav a {
+        border-top: none;
+        padding: 15px 18px;
+    }
+
+    nav a.active {
+        border-left: none;
+        border-bottom: 4px solid #fca311;
+    }
+
+    /* MAIN CONTENT */
+    main {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* MEMBER GRID */
+    #members-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* MEMBER LIST */
+    #members-container.list-view .member-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+
+    #members-container.list-view .member-card p {
+        flex: 1;
+    }
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .development-info {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        text-align: left;
+    }
+}
+
+
+/* =================================
+   LARGE DESKTOP
+================================= */
+
+@media screen and (min-width: 1000px) {
+
+    main {
+        max-width: 1200px;
+        padding: 30px 25px;
+    }
+
+    /* THREE BUSINESS CARDS PER ROW */
+    #members-container.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .member-card {
+        padding: 22px;
+    }
+
+    .member-card img {
+        width: 170px;
+        height: 110px;
+    }
+
+    /* LIST VIEW */
+    #members-container.list-view .member-card {
+        padding: 15px 25px;
+    }
+
+}
