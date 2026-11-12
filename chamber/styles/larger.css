@@ -1,14 +1,17 @@
 
 /* =================================
-   TABLET AND DESKTOP RESPONSIVENESS
+   LARGE CSS
+   Jos City Chamber of Commerce
+   Tablet and Desktop
 ================================= */
+
+/* TABLET */
 
 @media screen and (min-width: 700px) {
 
     /* HEADER */
+
     .header-content {
-        max-width: 1200px;
-        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -36,7 +39,8 @@
         border-bottom: 4px solid #fca311;
     }
 
-    /* MAIN CONTENT */
+    /* MAIN */
+
     main {
         padding: 25px 20px;
     }
@@ -45,26 +49,25 @@
         font-size: 2rem;
     }
 
-    /* MEMBER GRID */
+    /* TWO-COLUMN GRID */
+
     #members-container.grid-view {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    /* MEMBER LIST */
+    /* HORIZONTAL LIST */
+
     #members-container.list-view .member-card {
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr auto;
         align-items: center;
         gap: 20px;
         padding: 15px 20px;
     }
 
-    #members-container.list-view .member-card p {
-        flex: 1;
-    }
-
     /* FOOTER */
+
     footer {
         display: flex;
         justify-content: space-around;
@@ -82,10 +85,7 @@
     }
 }
 
-
-/* =================================
-   LARGE DESKTOP
-================================= */
+/* LARGE DESKTOP */
 
 @media screen and (min-width: 1000px) {
 
@@ -94,7 +94,8 @@
         padding: 30px 25px;
     }
 
-    /* THREE BUSINESS CARDS PER ROW */
+    /* THREE-COLUMN GRID */
+
     #members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
@@ -109,9 +110,9 @@
         height: 110px;
     }
 
-    /* LIST VIEW */
+    /* DESKTOP LIST VIEW */
+
     #members-container.list-view .member-card {
         padding: 15px 25px;
     }
-
 }

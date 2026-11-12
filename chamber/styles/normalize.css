@@ -4,52 +4,37 @@
    Jos City Chamber of Commerce
 ================================= */
 
-/* Remove default spacing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Improve text rendering */
 html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
 }
 
-/* Body */
 body {
     min-height: 100vh;
 }
 
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
 }
 
-/* Images */
 img {
     display: block;
     max-width: 100%;
 }
 
-/* Links */
 a {
     background-color: transparent;
 }
 
-/* Buttons and form elements */
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
     font: inherit;
 }
 
@@ -57,30 +42,23 @@ button {
     cursor: pointer;
 }
 
-/* Remove default button appearance inconsistencies */
-button,
-input {
+button, input {
     overflow: visible;
 }
 
-/* Lists */
-ul,
-ol {
+ul, ol {
     list-style-position: inside;
 }
 
-/* Tables */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/* Footer */
 footer {
     width: 100%;
 }
 
-/* Accessibility */
 :focus-visible {
     outline: 3px solid #fca311;
     outline-offset: 3px;
