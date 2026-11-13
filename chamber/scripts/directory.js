@@ -1,5 +1,4 @@
 
-
 // ======================================
 // JOS CITY CHAMBER OF COMMERCE
 // DIRECTORY JAVASCRIPT
@@ -26,6 +25,10 @@ async function getMembers() {
 
         const members = await response.json();
 
+        if (!Array.isArray(members)) {
+            throw new Error("Member information is not in the expected format.");
+        }
+
         displayMembers(members);
 
     } catch (error) {
@@ -41,9 +44,9 @@ async function getMembers() {
 // ======================================
 
 function displayMembers(members) {
-    membersContainer.innerHTML = "";
+    const fragment = document.createDocumentFragment();
 
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         const card = document.createElement("article");
         card.classList.add("member-card");
 
@@ -61,9 +64,10 @@ function displayMembers(members) {
             <img
                 src="images/${member.image}"
                 alt="${member.name} business logo"
-                loading="lazy"
                 width="150"
                 height="100"
+                loading="lazy"
+                decoding="async"
             >
 
             <h2>${member.name}</h2>
@@ -98,8 +102,10 @@ function displayMembers(members) {
             </details>
         `;
 
-        membersContainer.appendChild(card);
+        fragment.appendChild(card);
     });
+
+    membersContainer.replaceChildren(fragment);
 }
 
 // ======================================
@@ -128,8 +134,8 @@ listButton.addEventListener("click", () => {
     listButton.classList.add("selected");
     gridButton.classList.remove("selected");
 
-    listButton.setAttribute("aria-pressed", "true");
-    gridButton.setAttribute("aria-pressed", "false");
+    listButton.setAttribute("aria-pressed", "false");
+    gridButton.setAttribute("aria-pressed", "true");
 });
 
 // ======================================
