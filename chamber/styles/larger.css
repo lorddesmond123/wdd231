@@ -5,7 +5,7 @@
    Tablet and Desktop
 ================================= */
 
-/* TABLET */
+/* TABLET AND DESKTOP */
 
 @media screen and (min-width: 700px) {
 
@@ -16,6 +16,15 @@
         align-items: center;
         justify-content: space-between;
         padding: 15px 20px;
+    }
+
+    .site-brand img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .brand-name {
+        font-size: 1.45rem;
     }
 
     .menu-button {
@@ -39,7 +48,7 @@
         border-bottom: 4px solid #fca311;
     }
 
-    /* MAIN */
+    /* MAIN CONTENT */
 
     main {
         padding: 25px 20px;
@@ -49,14 +58,14 @@
         font-size: 2rem;
     }
 
-    /* TWO-COLUMN GRID */
+    /* DIRECTORY GRID */
 
     #members-container.grid-view {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
-    /* HORIZONTAL LIST */
+    /* DIRECTORY LIST */
 
     #members-container.list-view .member-card {
         display: grid;
@@ -83,18 +92,49 @@
         border-top: none;
         text-align: left;
     }
+
+    /* HOMEPAGE HERO */
+
+    .hero img {
+        height: 480px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    /* HOMEPAGE INFORMATION */
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: stretch;
+    }
+
+    .events {
+        grid-column: 1 / -1;
+    }
+
+    /* BUSINESS SPOTLIGHTS */
+
+    #spotlight-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* LARGE DESKTOP */
+/* =================================
+   LARGE DESKTOP
+================================= */
 
 @media screen and (min-width: 1000px) {
+
+    /* MAIN CONTENT */
 
     main {
         max-width: 1200px;
         padding: 30px 25px;
     }
 
-    /* THREE-COLUMN GRID */
+    /* THREE-COLUMN DIRECTORY */
 
     #members-container.grid-view {
         grid-template-columns: repeat(3, 1fr);
@@ -115,57 +155,8 @@
     #members-container.list-view .member-card {
         padding: 15px 25px;
     }
-}
 
-
-/* =================================
-   HOMEPAGE TABLET AND DESKTOP
-================================= */
-
-@media screen and (min-width: 700px) {
-
-    /* HEADER */
-
-    .site-brand img {
-        width: 76px;
-        height: 76px;
-    }
-
-    .brand-name {
-        font-size: 1.45rem;
-    }
-
-    /* HERO */
-
-    .hero img {
-        height: 480px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.3rem;
-    }
-
-    /* HOME INFORMATION */
-
-    .home-grid {
-        grid-template-columns: 2fr 1fr;
-        align-items: stretch;
-    }
-
-    .events {
-        grid-column: 1 / -1;
-    }
-
-    /* BUSINESS SPOTLIGHTS */
-
-    #spotlight-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1000px) {
-
-    /* HERO */
+    /* HOMEPAGE HERO */
 
     .hero img {
         height: 510px;
@@ -175,7 +166,7 @@
         font-size: 2.5rem;
     }
 
-    /* THREE COLUMN INFORMATION */
+    /* THREE-COLUMN HOMEPAGE INFORMATION */
 
     .home-grid {
         grid-template-columns: 2fr 1fr 1fr;
