@@ -116,3 +116,84 @@
         padding: 15px 25px;
     }
 }
+
+
+/* =================================
+   HOMEPAGE TABLET AND DESKTOP
+================================= */
+
+@media screen and (min-width: 700px) {
+
+    /* HEADER */
+
+    .site-brand img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .brand-name {
+        font-size: 1.45rem;
+    }
+
+    /* HERO */
+
+    .hero img {
+        height: 480px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    /* HOME INFORMATION */
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+        align-items: stretch;
+    }
+
+    .events {
+        grid-column: 1 / -1;
+    }
+
+    /* BUSINESS SPOTLIGHTS */
+
+    #spotlight-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    /* HERO */
+
+    .hero img {
+        height: 510px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* THREE COLUMN INFORMATION */
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        align-items: stretch;
+    }
+
+    .events {
+        grid-column: auto;
+    }
+
+    /* THREE BUSINESS SPOTLIGHTS */
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .spotlight-card {
+        padding: 20px;
+    }
+}
