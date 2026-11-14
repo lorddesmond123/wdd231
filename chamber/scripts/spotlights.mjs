@@ -65,7 +65,9 @@ export async function getSpotlights() {
                     decoding="async"
                 >
 
-                <p class="membership">${membershipName}</p>
+                <p class="membership ${member.membership === 3 ? "gold" : "silver"}">
+    ${membershipName}
+</p>
 
                 <p><strong>Phone:</strong> ${member.phone}</p>
 

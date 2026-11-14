@@ -485,12 +485,11 @@ footer p {
     border-bottom: none;
 }
 
-.forecast-card h4 {
-    margin: 0;
-    color: var(--dark-blue);
+.forecast-card h3 {
+    color: #2c4053;
     font-size: 0.9rem;
+    margin: 0;
 }
-
 .forecast-card img {
     display: none;
 }
@@ -556,6 +555,7 @@ footer p {
     padding: 4px 12px;
     color: var(--white-color);
     font-size: 0.8rem;
+    font-weight: 700;
 }
 
 .spotlight-card .membership.gold {
