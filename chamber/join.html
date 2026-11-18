@@ -5,89 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Join the Jos City Chamber of Commerce and connect with businesses in Jos, Plateau State, Nigeria.">
+    <meta name="description" content="Join the Jos City Chamber of Commerce. Connect with local businesses, discover networking opportunities and support economic growth in Jos, Plateau State, Nigeria.">
+
     <meta name="author" content="Henga Liambee Desmond">
 
-    <title>Join | Jos City Chamber of Commerce</title>
+    <meta property="og:title" content="Join the Jos City Chamber of Commerce">
 
-    <link rel="icon" href="images/favicon.png">
+    <meta property="og:description" content="Become a member of the Jos City Chamber of Commerce. Connect with businesses and discover opportunities for growth in Jos, Plateau State, Nigeria.">
+
+    <meta property="og:image" content="https://lorddesmond123.github.io/wdd231/chamber/images/jos-hero.jpg">
+
+    <meta property="og:url" content="https://lorddesmond123.github.io/wdd231/chamber/join.html">
+
+    <meta property="og:type" content="website">
+
+    <title>Jos City Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="images/logo.svg.jpg">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/join.css">
 
+    <!-- JAVASCRIPT -->
     <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
 
-
-<header class="join-header">
+<!-- HEADER -->
+<header>
     <div class="header-content">
 
         <div class="site-brand">
             <img src="images/logo.svg.jpg"
-                 alt="Jos City Chamber of Commerce Logo"
-                 width="80"
-                 height="80">
+                 alt="Jos City Chamber of Commerce logo"
+                 width="76"
+                 height="76">
 
             <div>
-                <h2>Jos City</h2>
-                <p>Chamber of Commerce</p>
+                <span class="brand-name">Jos City</span>
+                <span class="brand-subtitle">Chamber of Commerce</span>
             </div>
         </div>
 
         <button id="menu-button"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-controls="primary-nav"
-            aria-expanded="false">
+                class="menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-nav">
             ☰
         </button>
 
         <nav id="primary-nav">
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
-            <a href="join.html" aria-current="page">Join</a>
+            <a href="join.html" class="active" aria-current="page">Join</a>
             <a href="discover.html">Discover</a>
         </nav>
 
     </div>
 </header>
 
+<main>
 
-<main class="join-main">
-
-    <!-- HERO -->
+    <!-- JOIN HERO -->
     <section class="join-hero">
-        <div>
-            <h1>Join the Jos City Chamber</h1>
+
+        <div class="join-hero-content">
+            <h1>Join the Jos City Chamber of Commerce</h1>
 
             <p>
-                Grow your business, build valuable relationships
-                and become part of the Jos business community.
+                Connecting businesses. Strengthening our community.
+                Become part of the growing business community in Jos.
             </p>
 
             <a href="#application-form" class="join-button">
                 Apply for Membership
             </a>
         </div>
+
     </section>
 
     <!-- INTRODUCTION -->
     <section class="join-intro">
-        <h2>Why Join Our Chamber?</h2>
+
+        <h2>Become a Chamber Member</h2>
 
         <p>
-            The Jos City Chamber of Commerce supports local
-            businesses by providing networking, promotional
-            and development opportunities. Join us and help
-            strengthen the economy of Jos City.
+            The Jos City Chamber of Commerce provides opportunities
+            for businesses and organizations to connect, grow and
+            contribute to economic development in Jos, Plateau State.
+            Join us and help build a stronger business community.
         </p>
+
     </section>
 
-    <!-- BENEFITS -->
+    <!-- MEMBERSHIP BENEFITS -->
     <section class="benefits-section">
+
         <h2>Membership Benefits</h2>
 
         <div class="benefits-grid">
@@ -95,67 +120,75 @@
             <article class="benefit-card">
                 <h3>Business Networking</h3>
                 <p>
-                    Connect with other business owners and
-                    build valuable professional relationships.
+                    Connect with other business owners and build
+                    valuable professional relationships.
                 </p>
             </article>
 
             <article class="benefit-card">
                 <h3>Business Promotion</h3>
                 <p>
-                    Promote your organization through the
-                    chamber business directory.
+                    Promote your business through the chamber
+                    member directory.
                 </p>
             </article>
 
             <article class="benefit-card">
                 <h3>Learning Opportunities</h3>
                 <p>
-                    Participate in activities that support
-                    business development and growth.
+                    Participate in business development activities
+                    and learning opportunities.
                 </p>
             </article>
 
             <article class="benefit-card">
                 <h3>Community Development</h3>
                 <p>
-                    Support economic growth and development
-                    throughout Jos City.
+                    Support local businesses and contribute
+                    to economic growth in Jos City.
                 </p>
             </article>
 
         </div>
+
     </section>
 
     <!-- MEMBERSHIP LEVELS -->
     <section class="membership-section">
-        <h2>Choose Your Membership Level</h2>
+
+        <h2>Our Membership Levels</h2>
 
         <p class="section-description">
-            Select the membership level that best suits
-            your organization.
+            Choose the membership level that best suits your organization.
         </p>
 
         <div class="membership-levels">
 
+            <!-- NON-PROFIT -->
             <article class="membership-card">
+
                 <h3>Non-Profit Membership</h3>
+
                 <p>For eligible non-profit organizations.</p>
 
                 <ul>
                     <li>Community networking</li>
-                    <li>Local development activities</li>
+                    <li>Community development activities</li>
                 </ul>
 
                 <button type="button"
-                    class="benefit-button"
-                    data-modal="nonprofit-modal">
+                        class="benefit-button"
+                        data-modal="nonprofit-modal">
                     View Benefits
                 </button>
+
             </article>
 
+            <!-- BRONZE -->
             <article class="membership-card">
+
                 <h3>Bronze Membership</h3>
+
                 <p>For small and growing businesses.</p>
 
                 <ul>
@@ -164,30 +197,38 @@
                 </ul>
 
                 <button type="button"
-                    class="benefit-button"
-                    data-modal="bronze-modal">
+                        class="benefit-button"
+                        data-modal="bronze-modal">
                     View Benefits
                 </button>
+
             </article>
 
+            <!-- SILVER -->
             <article class="membership-card">
+
                 <h3>Silver Membership</h3>
+
                 <p>For established businesses.</p>
 
                 <ul>
                     <li>Bronze membership benefits</li>
-                    <li>Additional promotion</li>
+                    <li>Additional business promotion</li>
                 </ul>
 
                 <button type="button"
-                    class="benefit-button"
-                    data-modal="silver-modal">
+                        class="benefit-button"
+                        data-modal="silver-modal">
                     View Benefits
                 </button>
+
             </article>
 
+            <!-- GOLD -->
             <article class="membership-card">
+
                 <h3>Gold Membership</h3>
+
                 <p>For businesses seeking greater visibility.</p>
 
                 <ul>
@@ -196,59 +237,76 @@
                 </ul>
 
                 <button type="button"
-                    class="benefit-button"
-                    data-modal="gold-modal">
+                        class="benefit-button"
+                        data-modal="gold-modal">
                     View Benefits
                 </button>
+
             </article>
 
         </div>
+
     </section>
 
     <!-- MEMBERSHIP MODALS -->
+
     <dialog id="nonprofit-modal" class="membership-modal">
-        <h2>Non-Profit Membership</h2>
-        <p>Benefits include:</p>
+
+        <h2>Non-Profit Membership Benefits</h2>
+
         <ul>
             <li>Community networking opportunities.</li>
             <li>Participation in community activities.</li>
             <li>Support for local development initiatives.</li>
         </ul>
+
         <button type="button" class="close-modal">Close</button>
+
     </dialog>
 
     <dialog id="bronze-modal" class="membership-modal">
-        <h2>Bronze Membership</h2>
-        <p>Benefits include:</p>
+
+        <h2>Bronze Membership Benefits</h2>
+
         <ul>
             <li>Business directory listing.</li>
             <li>Networking opportunities.</li>
             <li>Access to chamber events.</li>
+            <li>Business community connections.</li>
         </ul>
+
         <button type="button" class="close-modal">Close</button>
+
     </dialog>
 
     <dialog id="silver-modal" class="membership-modal">
-        <h2>Silver Membership</h2>
-        <p>Benefits include:</p>
+
+        <h2>Silver Membership Benefits</h2>
+
         <ul>
             <li>All Bronze membership benefits.</li>
             <li>Additional business promotion.</li>
             <li>Learning and development opportunities.</li>
+            <li>Greater business visibility.</li>
         </ul>
+
         <button type="button" class="close-modal">Close</button>
+
     </dialog>
 
     <dialog id="gold-modal" class="membership-modal">
-        <h2>Gold Membership</h2>
-        <p>Benefits include:</p>
+
+        <h2>Gold Membership Benefits</h2>
+
         <ul>
             <li>All Silver membership benefits.</li>
             <li>Premium business promotion.</li>
             <li>Priority networking opportunities.</li>
             <li>Additional chamber recognition.</li>
         </ul>
+
         <button type="button" class="close-modal">Close</button>
+
     </dialog>
 
     <!-- APPLICATION FORM -->
@@ -257,13 +315,17 @@
         <h2>Membership Application</h2>
 
         <p>
-            Complete the form below to apply for membership.
-            All fields marked required must be completed.
+            Complete the application form below to become
+            a member of the Jos City Chamber of Commerce.
         </p>
 
-        <form action="thankyou.html" method="get" class="join-form">
+        <form action="thankyou.html"
+              method="get"
+              class="join-form">
 
+            <!-- FIRST NAME -->
             <label for="first-name">First Name</label>
+
             <input
                 type="text"
                 id="first-name"
@@ -273,7 +335,9 @@
                 required
             >
 
+            <!-- LAST NAME -->
             <label for="last-name">Last Name</label>
+
             <input
                 type="text"
                 id="last-name"
@@ -283,7 +347,11 @@
                 required
             >
 
-            <label for="organization-title">Organizational Title</label>
+            <!-- ORGANIZATIONAL TITLE -->
+            <label for="organization-title">
+                Organizational Title
+            </label>
+
             <input
                 type="text"
                 id="organization-title"
@@ -295,7 +363,11 @@
                 required
             >
 
-            <label for="organization">Business or Organization</label>
+            <!-- ORGANIZATION -->
+            <label for="organization">
+                Business or Organization
+            </label>
+
             <input
                 type="text"
                 id="organization"
@@ -305,18 +377,22 @@
                 required
             >
 
+            <!-- EMAIL -->
             <label for="email">Email Address</label>
+
             <input
                 type="email"
                 id="email"
                 name="email"
-                title="Enter a valid email address"
+                title="Enter your email address"
                 autocomplete="email"
                 placeholder="example@email.com"
                 required
             >
 
+            <!-- PHONE -->
             <label for="phone">Phone Number</label>
+
             <input
                 type="tel"
                 id="phone"
@@ -326,7 +402,9 @@
                 required
             >
 
+            <!-- MEMBERSHIP LEVEL -->
             <label for="membership">Membership Level</label>
+
             <select
                 id="membership"
                 name="membership"
@@ -334,14 +412,18 @@
                 autocomplete="off"
                 required
             >
+
                 <option value="">Select a membership level</option>
                 <option value="nonprofit">Non-Profit</option>
                 <option value="bronze">Bronze</option>
                 <option value="silver">Silver</option>
                 <option value="gold">Gold</option>
+
             </select>
 
+            <!-- BUSINESS DESCRIPTION -->
             <label for="description">Business Description</label>
+
             <textarea
                 id="description"
                 name="description"
@@ -350,6 +432,7 @@
                 rows="5"
             ></textarea>
 
+            <!-- TIMESTAMP -->
             <input
                 type="hidden"
                 name="timestamp"
@@ -361,14 +444,44 @@
             </button>
 
         </form>
+
     </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-    <p><strong>Jos City Chamber of Commerce</strong></p>
-    <p>Jos, Plateau State, Nigeria</p>
-    <p>&copy; <span id="currentyear"></span> Jos City Chamber</p>
+
+    <div class="contact-info">
+
+        <h2>Jos City Chamber of Commerce</h2>
+
+        <p>Jos, Plateau State, Nigeria</p>
+
+        <p>Email: joccima@gmail.com</p>
+
+        <p>Phone: +234 703 833 8460</p>
+
+    </div>
+
+    <div class="development-info">
+
+        <p>Henga Liambee Desmond</p>
+
+        <p>WDD 231 - Web Frontend Development</p>
+
+        <p>
+            &copy; <span id="currentyear"></span>
+            Jos City Chamber of Commerce
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
+
+    </div>
+
 </footer>
 
 </body>

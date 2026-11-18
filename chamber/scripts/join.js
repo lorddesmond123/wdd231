@@ -52,3 +52,10 @@ document.querySelectorAll("dialog").forEach((modal) => {
         }
     });
 });
+
+// FOOTER DATE INFORMATION
+document.querySelector("#currentyear").textContent =
+    new Date().getFullYear();
+
+document.querySelector("#lastModified").textContent =
+    document.lastModified;
