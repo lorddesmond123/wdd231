@@ -1,0 +1,375 @@
+
+/* =========================================
+   JOS CITY CHAMBER - JOIN PAGE
+========================================= */
+
+.join-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.join-main h1,
+.join-main h2,
+.join-main h3 {
+    color: #14213d;
+}
+
+.join-main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.join-main p {
+    line-height: 1.7;
+}
+
+/* HEADER NAVIGATION */
+
+.join-header #menu-button {
+    display: block;
+    background: #1d4e89;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.join-header #primary-nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+}
+
+.join-header #primary-nav.open {
+    display: flex;
+}
+
+.join-header #primary-nav a {
+    color: #14213d;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.join-header #primary-nav a[aria-current="page"] {
+    border-bottom: 3px solid #fca311;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.join-hero {
+    background: #14213d;
+    color: #ffffff;
+    text-align: center;
+    padding: 55px 20px;
+    border-radius: 10px;
+    margin: 20px 0 35px;
+}
+
+.join-hero h1 {
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.join-hero p {
+    max-width: 650px;
+    margin: 15px auto 25px;
+}
+
+.join-button {
+    display: inline-block;
+    background: #fca311;
+    color: #14213d;
+    padding: 13px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.join-button:hover,
+.join-button:focus {
+    background: #ffffff;
+}
+
+/* INTRODUCTION */
+
+.join-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* BENEFITS */
+
+.benefits-section,
+.membership-section,
+.application-section {
+    margin: 45px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.benefit-card {
+    background: #f1f4f8;
+    padding: 22px;
+    border-radius: 8px;
+    border-left: 5px solid #fca311;
+}
+
+.benefit-card h3 {
+    margin-top: 0;
+}
+
+/* MEMBERSHIP CARDS */
+
+.membership-levels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.membership-card {
+    background: #ffffff;
+    border: 1px solid #d5dce5;
+    border-top: 5px solid #1d4e89;
+    border-radius: 9px;
+    padding: 24px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    animation: cardEntrance 0.8s ease-out both;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.45s;
+}
+
+.membership-card h3 {
+    margin-top: 0;
+}
+
+.membership-card li {
+    margin-bottom: 8px;
+}
+
+.benefit-button,
+.close-modal {
+    background: #1d4e89;
+    color: #ffffff;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.benefit-button:hover,
+.close-modal:hover {
+    background: #14213d;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* CARD ANIMATION */
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .membership-card {
+        animation: none;
+    }
+}
+
+/* MODALS */
+
+.membership-modal {
+    width: min(90%, 450px);
+    border: none;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.membership-modal::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.membership-modal h2 {
+    text-align: left;
+}
+
+.membership-modal li {
+    margin-bottom: 12px;
+}
+
+/* APPLICATION FORM */
+
+.application-section {
+    background: #f1f4f8;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
+.application-section > p {
+    text-align: center;
+}
+
+.join-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 650px;
+    margin: 25px auto 0;
+}
+
+.join-form label {
+    font-weight: bold;
+    color: #14213d;
+    margin-top: 10px;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #697586;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #14213d;
+    font: inherit;
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 3px solid #1d4e89;
+    outline-offset: 2px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    padding: 15px;
+    background: #14213d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #1d4e89;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* TABLET AND DESKTOP */
+
+@media screen and (min-width: 700px) {
+
+    .join-header #menu-button {
+        display: none;
+    }
+
+    .join-header #primary-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .membership-levels {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .join-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .application-section {
+        padding: 40px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .membership-levels {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* =====================================
+   NAVIGATION TEXT COLOR CORRECTION
+===================================== */
+
+.join-header #primary-nav a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+.join-header #primary-nav a:visited {
+    color: #ffffff !important;
+}
+
+.join-header #primary-nav a:hover,
+.join-header #primary-nav a:focus {
+    color: #fca311 !important;
+}
+
+.join-header #primary-nav a[aria-current="page"] {
+    color: #ffffff !important;
+    border-bottom: 3px solid #fca311;
+}
+
+/* MOBILE NAVIGATION */
+
+@media screen and (max-width: 699px) {
+    .join-header #primary-nav a {
+        color: #ffffff !important;
+    }
+}

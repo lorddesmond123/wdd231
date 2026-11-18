@@ -5,23 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Join the Jos City Chamber of Commerce and connect with local businesses in Plateau State, Nigeria.">
-
+    <meta name="description" content="Join the Jos City Chamber of Commerce and connect with businesses in Jos, Plateau State, Nigeria.">
     <meta name="author" content="Henga Liambee Desmond">
 
-    <title>Jos City Chamber of Commerce | Join</title>
+    <title>Join | Jos City Chamber of Commerce</title>
 
     <link rel="icon" href="images/favicon.png">
-
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h2>Jos City Chamber of Commerce</h2>
+
+<header class="join-header">
+    <div class="header-content">
+
+        <div class="site-brand">
+            <img src="images/logo.svg.jpg"
+                 alt="Jos City Chamber of Commerce Logo"
+                 width="80"
+                 height="80">
+
+            <div>
+                <h2>Jos City</h2>
+                <p>Chamber of Commerce</p>
+            </div>
+        </div>
+
+        <button id="menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="primary-nav"
+            aria-expanded="false">
+            ☰
+        </button>
 
         <nav id="primary-nav">
             <a href="index.html">Home</a>
@@ -29,88 +51,289 @@
             <a href="join.html" aria-current="page">Join</a>
             <a href="discover.html">Discover</a>
         </nav>
-    </header>
 
-    <main>
-        <h1>Join Our Chamber</h1>
+    </div>
+</header>
+
+
+<main class="join-main">
+
+    <!-- HERO -->
+    <section class="join-hero">
+        <div>
+            <h1>Join the Jos City Chamber</h1>
+
+            <p>
+                Grow your business, build valuable relationships
+                and become part of the Jos business community.
+            </p>
+
+            <a href="#application-form" class="join-button">
+                Apply for Membership
+            </a>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="join-intro">
+        <h2>Why Join Our Chamber?</h2>
 
         <p>
-            Become a member of the Jos City Chamber of Commerce.
-            Connect with other businesses, promote your services,
-            and take advantage of opportunities in our community.
+            The Jos City Chamber of Commerce supports local
+            businesses by providing networking, promotional
+            and development opportunities. Join us and help
+            strengthen the economy of Jos City.
         </p>
+    </section>
 
+    <!-- BENEFITS -->
+    <section class="benefits-section">
         <h2>Membership Benefits</h2>
 
-        <ul>
-            <li>Connect with other local business owners.</li>
-            <li>Promote your business in our member directory.</li>
-            <li>Discover networking opportunities.</li>
-            <li>Participate in business development activities.</li>
-            <li>Support economic growth in Jos City.</li>
-        </ul>
+        <div class="benefits-grid">
 
-        <h2>Membership Levels</h2>
+            <article class="benefit-card">
+                <h3>Business Networking</h3>
+                <p>
+                    Connect with other business owners and
+                    build valuable professional relationships.
+                </p>
+            </article>
+
+            <article class="benefit-card">
+                <h3>Business Promotion</h3>
+                <p>
+                    Promote your organization through the
+                    chamber business directory.
+                </p>
+            </article>
+
+            <article class="benefit-card">
+                <h3>Learning Opportunities</h3>
+                <p>
+                    Participate in activities that support
+                    business development and growth.
+                </p>
+            </article>
+
+            <article class="benefit-card">
+                <h3>Community Development</h3>
+                <p>
+                    Support economic growth and development
+                    throughout Jos City.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP LEVELS -->
+    <section class="membership-section">
+        <h2>Choose Your Membership Level</h2>
+
+        <p class="section-description">
+            Select the membership level that best suits
+            your organization.
+        </p>
 
         <div class="membership-levels">
 
-            <section>
+            <article class="membership-card">
                 <h3>Non-Profit Membership</h3>
                 <p>For eligible non-profit organizations.</p>
-                <p>Community support and networking opportunities.</p>
-            </section>
 
-            <section>
+                <ul>
+                    <li>Community networking</li>
+                    <li>Local development activities</li>
+                </ul>
+
+                <button type="button"
+                    class="benefit-button"
+                    data-modal="nonprofit-modal">
+                    View Benefits
+                </button>
+            </article>
+
+            <article class="membership-card">
                 <h3>Bronze Membership</h3>
                 <p>For small and growing businesses.</p>
-                <p>Business promotion and networking opportunities.</p>
-            </section>
 
-            <section>
+                <ul>
+                    <li>Business directory listing</li>
+                    <li>Networking opportunities</li>
+                </ul>
+
+                <button type="button"
+                    class="benefit-button"
+                    data-modal="bronze-modal">
+                    View Benefits
+                </button>
+            </article>
+
+            <article class="membership-card">
                 <h3>Silver Membership</h3>
                 <p>For established businesses.</p>
-                <p>Additional promotional and learning opportunities.</p>
-            </section>
 
-            <section>
+                <ul>
+                    <li>Bronze membership benefits</li>
+                    <li>Additional promotion</li>
+                </ul>
+
+                <button type="button"
+                    class="benefit-button"
+                    data-modal="silver-modal">
+                    View Benefits
+                </button>
+            </article>
+
+            <article class="membership-card">
                 <h3>Gold Membership</h3>
                 <p>For businesses seeking greater visibility.</p>
-                <p>Premium promotional and networking opportunities.</p>
-            </section>
+
+                <ul>
+                    <li>Silver membership benefits</li>
+                    <li>Premium promotional opportunities</li>
+                </ul>
+
+                <button type="button"
+                    class="benefit-button"
+                    data-modal="gold-modal">
+                    View Benefits
+                </button>
+            </article>
 
         </div>
+    </section>
+
+    <!-- MEMBERSHIP MODALS -->
+    <dialog id="nonprofit-modal" class="membership-modal">
+        <h2>Non-Profit Membership</h2>
+        <p>Benefits include:</p>
+        <ul>
+            <li>Community networking opportunities.</li>
+            <li>Participation in community activities.</li>
+            <li>Support for local development initiatives.</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal" class="membership-modal">
+        <h2>Bronze Membership</h2>
+        <p>Benefits include:</p>
+        <ul>
+            <li>Business directory listing.</li>
+            <li>Networking opportunities.</li>
+            <li>Access to chamber events.</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal" class="membership-modal">
+        <h2>Silver Membership</h2>
+        <p>Benefits include:</p>
+        <ul>
+            <li>All Bronze membership benefits.</li>
+            <li>Additional business promotion.</li>
+            <li>Learning and development opportunities.</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal" class="membership-modal">
+        <h2>Gold Membership</h2>
+        <p>Benefits include:</p>
+        <ul>
+            <li>All Silver membership benefits.</li>
+            <li>Premium business promotion.</li>
+            <li>Priority networking opportunities.</li>
+            <li>Additional chamber recognition.</li>
+        </ul>
+        <button type="button" class="close-modal">Close</button>
+    </dialog>
+
+    <!-- APPLICATION FORM -->
+    <section class="application-section" id="application-form">
 
         <h2>Membership Application</h2>
 
-        <form action="#" method="get">
+        <p>
+            Complete the form below to apply for membership.
+            All fields marked required must be completed.
+        </p>
+
+        <form action="thankyou.html" method="get" class="join-form">
 
             <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name"
-                title="Enter your first name" autocomplete="given-name"
-                required>
+            <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required
+            >
 
             <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name"
-                title="Enter your last name" autocomplete="family-name"
-                required>
+            <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required
+            >
+
+            <label for="organization-title">Organizational Title</label>
+            <input
+                type="text"
+                id="organization-title"
+                name="organization-title"
+                title="Enter your organizational title using at least seven letters, spaces, or hyphens."
+                autocomplete="organization-title"
+                pattern="[A-Za-z -]{7,}"
+                minlength="7"
+                required
+            >
 
             <label for="organization">Business or Organization</label>
-            <input type="text" id="organization" name="organization"
-                title="Enter your business name" autocomplete="organization"
-                required>
+            <input
+                type="text"
+                id="organization"
+                name="organization"
+                title="Enter your business or organization name"
+                autocomplete="organization"
+                required
+            >
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email"
-                title="Enter your email address" autocomplete="email"
-                placeholder="example@email.com" required>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                title="Enter a valid email address"
+                autocomplete="email"
+                placeholder="example@email.com"
+                required
+            >
 
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone"
-                title="Enter your phone number" autocomplete="tel"
-                required>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                title="Enter your telephone number"
+                autocomplete="tel"
+                required
+            >
 
             <label for="membership">Membership Level</label>
-            <select id="membership" name="membership" required>
+            <select
+                id="membership"
+                name="membership"
+                title="Select your preferred membership level"
+                autocomplete="off"
+                required
+            >
                 <option value="">Select a membership level</option>
                 <option value="nonprofit">Non-Profit</option>
                 <option value="bronze">Bronze</option>
@@ -119,29 +342,34 @@
             </select>
 
             <label for="description">Business Description</label>
-            <textarea id="description" name="description"
-                title="Describe your business" rows="5"></textarea>
+            <textarea
+                id="description"
+                name="description"
+                title="Describe your business or organization"
+                autocomplete="off"
+                rows="5"
+            ></textarea>
 
-            <input type="hidden" name="timestamp" id="timestamp">
+            <input
+                type="hidden"
+                name="timestamp"
+                id="timestamp"
+            >
 
-            <button type="submit">Submit Application</button>
+            <button type="submit" class="submit-button">
+                Submit Application
+            </button>
 
         </form>
-    </main>
+    </section>
 
-    <footer>
-        <p>Jos City Chamber of Commerce</p>
-        <p>Jos, Plateau State, Nigeria</p>
-        <p>&copy; <span id="currentyear"></span> Jos City Chamber</p>
-    </footer>
+</main>
 
-    <script>
-        document.querySelector("#currentyear").textContent =
-            new Date().getFullYear();
-
-        document.querySelector("#timestamp").value =
-            new Date().toISOString();
-    </script>
+<footer>
+    <p><strong>Jos City Chamber of Commerce</strong></p>
+    <p>Jos, Plateau State, Nigeria</p>
+    <p>&copy; <span id="currentyear"></span> Jos City Chamber</p>
+</footer>
 
 </body>
 </html>
