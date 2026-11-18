@@ -1,65 +1,74 @@
 
-// GET FORM INFORMATION
+// READ FORM VALUES USING URLSearchParams
 const params = new URLSearchParams(window.location.search);
 
-// FORM FIELDS TO DISPLAY
-const fields = [
-    "first-name",
-    "last-name",
-    "email",
-    "phone",
-    "organization",
-    "organization-title"
-];
+// GET SUBMITTED VALUES
+const firstName = params.get("first-name") || "";
+const lastName = params.get("last-name") || "";
+const email = params.get("email") || "";
+const phone = params.get("phone") || "";
+const organization = params.get("organization") || "";
+const organizationTitle = params.get("organization-title") || "";
+const membership = params.get("membership") || "";
+const timestamp = params.get("timestamp") || "";
 
-// DISPLAY SUBMITTED INFORMATION
-fields.forEach((field) => {
-    const element = document.getElementById(field);
-
-    if (element) {
-        element.textContent = params.get(field) || "Not provided";
-    }
-});
-
-// DISPLAY MEMBERSHIP LEVEL
-const membership = params.get("membership");
-
+// FORMAT MEMBERSHIP LEVEL
 const membershipNames = {
-    nonprofit: "Non-Profit",
-    bronze: "Bronze",
-    silver: "Silver",
-    gold: "Gold"
+    nonprofit: "Nonprofit Membership",
+    bronze: "Bronze Membership",
+    silver: "Silver Membership",
+    gold: "Gold Membership"
 };
 
-document.getElementById("membership").textContent =
-    membershipNames[membership] || "Not provided";
+const membershipName = membershipNames[membership] || membership || "Not provided";
 
-// DISPLAY SUBMISSION DATE
-const timestamp = params.get("timestamp");
-const dateElement = document.getElementById("timestamp");
+// FORMAT SUBMISSION DATE
+let submissionDate = "Not provided";
 
-if (timestamp && !Number.isNaN(Date.parse(timestamp))) {
-    dateElement.textContent =
-        new Date(timestamp).toLocaleString();
-} else {
-    dateElement.textContent = "Not available";
+if (timestamp) {
+    const date = new Date(timestamp);
+
+    if (!Number.isNaN(date.getTime())) {
+        submissionDate = date.toLocaleString();
+    }
+}
+
+// DISPLAY APPLICATION DETAILS
+const details = document.querySelector("#application-details");
+
+if (details) {
+    details.innerHTML = `
+        <p><strong>First Name:</strong> ${firstName}</p>
+        <p><strong>Last Name:</strong> ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Organization:</strong> ${organization}</p>
+        <p><strong>Organization Title:</strong> ${organizationTitle}</p>
+        <p><strong>Membership:</strong> ${membershipName}</p>
+        <p><strong>Application Date:</strong> ${submissionDate}</p>
+    `;
 }
 
 // CURRENT YEAR
-document.getElementById("currentyear").textContent =
-    new Date().getFullYear();
+const currentYear = document.querySelector("#currentyear");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+// LAST MODIFIED
+const lastModified = document.querySelector("#lastModified");
+
+if (lastModified) {
+    lastModified.textContent = document.lastModified;
+}
 
 // MOBILE NAVIGATION
-const menuButton = document.getElementById("menu-button");
-const navigation = document.getElementById("primary-nav");
+const menuButton = document.querySelector("#menu-button");
+const primaryNav = document.querySelector("#primary-nav");
 
-menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-});
+if (menuButton && primaryNav) {
+    menuButton.addEventListener("click", () => {
+        primaryNav.classList.toggle("open");
+    });
+}

@@ -1,25 +1,44 @@
 
+/* =========================================
+   JOS CITY CHAMBER - JOIN PAGE JAVASCRIPT
+========================================= */
+
 // CURRENT YEAR
-document.querySelector("#currentyear").textContent =
-    new Date().getFullYear();
+const currentYear = document.querySelector("#currentyear");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+// LAST MODIFIED DATE
+const lastModified = document.querySelector("#lastModified");
+
+if (lastModified) {
+    lastModified.textContent = document.lastModified;
+}
 
 // FORM TIMESTAMP
-document.querySelector("#timestamp").value =
-    new Date().toISOString();
+const timestamp = document.querySelector("#timestamp");
+
+if (timestamp) {
+    timestamp.value = new Date().toISOString();
+}
 
 // MOBILE NAVIGATION
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#primary-nav");
 
-menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("open");
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
 
-    menuButton.setAttribute("aria-expanded", isOpen);
-    menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation menu" : "Open navigation menu"
-    );
-});
+        menuButton.setAttribute("aria-expanded", isOpen);
+        menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+}
 
 // MEMBERSHIP MODALS
 const benefitButtons = document.querySelectorAll(".benefit-button");
@@ -40,7 +59,11 @@ const closeButtons = document.querySelectorAll(".close-modal");
 
 closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        button.closest("dialog").close();
+        const modal = button.closest("dialog");
+
+        if (modal) {
+            modal.close();
+        }
     });
 });
 
@@ -52,10 +75,3 @@ document.querySelectorAll("dialog").forEach((modal) => {
         }
     });
 });
-
-// FOOTER DATE INFORMATION
-document.querySelector("#currentyear").textContent =
-    new Date().getFullYear();
-
-document.querySelector("#lastModified").textContent =
-    document.lastModified;

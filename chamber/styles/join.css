@@ -1,3 +1,4 @@
+
 /* =========================================
    JOS CITY CHAMBER - JOIN PAGE
 ========================================= */
@@ -88,7 +89,9 @@
     margin: 15px auto 25px;
 }
 
-.join-button {
+/* JOIN BUTTON */
+
+.join-hero .join-button {
     display: inline-block;
     background-color: #fca311;
     color: #14213d;
@@ -99,8 +102,8 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.join-button:hover,
-.join-button:focus {
+.join-hero .join-button:hover,
+.join-hero .join-button:focus {
     background-color: #ffffff;
     color: #14213d;
     transform: translateY(-2px);
@@ -286,6 +289,8 @@
     outline-offset: 2px;
 }
 
+/* SUBMIT BUTTON */
+
 .submit-button {
     margin-top: 15px;
     padding: 15px;
@@ -300,13 +305,6 @@
 
 .submit-button:hover {
     background: #1d4e89;
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 25px 15px;
 }
 
 /* TABLET AND DESKTOP */
