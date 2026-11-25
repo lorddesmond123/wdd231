@@ -1,0 +1,134 @@
+:root {
+            --primary: #14213d;
+            --accent: #fca311;
+            --background: #ffffff;
+            --success: #087f68;
+            --light: #f3f4f6;
+            --text: #333333;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Roboto", sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        h1, h2, h3 {
+            font-family: "Poppins", sans-serif;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 8px;
+        }
+
+        main {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .highlight {
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .color-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .color-item {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #cccccc;
+        }
+
+        .swatch {
+            height: 45px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+        }
+
+        .wireframe {
+            background: white;
+            border: 2px solid var(--primary);
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .wireframe div {
+            background: #e5e7eb;
+            padding: 15px;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+
+        .wireframe .wire-header,
+        .wireframe .wire-footer {
+            background: var(--primary);
+            color: white;
+        }
+
+        .wireframe .wire-button {
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 12px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .color-list,
+            .courses {
+                grid-template-columns: 1fr;
+            }
+        }
+    
